@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:textAnim="http://schemas.android.com/apk/res/com.stone.textview.animation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000" >
+
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="240dp"
+        android:background="@drawable/back"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:orientation="vertical" >
+
+        <com.stone.textview.animation.AnimTextView
+            android:id="@+id/animText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:layout_marginRight="70dp"
+            textAnim:lineSpaceExtra="15dp"
+            textAnim:showText="天下风云出我辈，一入江湖岁月催\n皇图霸业谈笑中，不胜人生一场醉\n提剑跨骑挥鬼雨，白骨如山鸟惊飞\n尘世如潮人如水，只叹江湖几人回"
+            textAnim:textColor="#eee"
+            textAnim:textSize="16sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/fragment_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topLayout"
+        android:layout_marginTop="10dp"
+        android:background="#444444"
+        android:text="改变一下内容"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+
+</RelativeLayout>
