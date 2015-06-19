@@ -10,7 +10,7 @@ Mono里面有一种效果是这样的：<br/>
 看起来还不错吧。<br/><br/>
 
 有兴趣的朋友，可以下载demo试玩，还是比较流畅的：<br/>
-[Demo下载]("TextViewAnimation.apk")
+[Demo下载](TextViewAnimation.apk)
 
 
 
