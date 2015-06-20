@@ -33,6 +33,8 @@ public class AnimTextView extends View {
 	// 这个extraPaddingTop就是用来弥补偏差的，不代表绝对正确
 	private int extraPaddingTop = PixValue.dip.valueOf(1f);
 
+	private UIThread currentThread;
+
 	// 以下属性需要通过xml文件来配置
 	private int textSize = PixValue.sp.valueOf(14); // 字号
 	private int textColor = Color.WHITE; // 文字颜色
@@ -112,7 +114,10 @@ public class AnimTextView extends View {
 
 	@Override
 	protected void onFinishInflate() {
-		new UIThread().start();
+		if (charList.size() != 0) {
+			currentThread = new UIThread();
+			currentThread.start();
+		}
 	}
 
 	@Override
@@ -274,6 +279,11 @@ public class AnimTextView extends View {
 		initCharList();
 		requestLayout();
 
-		new UIThread().start();
+		if (null != currentThread && currentThread.isAlive()) {
+			currentThread.interrupt();
+		}
+
+		currentThread = new UIThread();
+		currentThread.start();
 	}
 }
