@@ -28,9 +28,9 @@ Mono里面有一种效果是这样的：<br>
             textAnim:textColor="#eee"
             textAnim:textSize="16sp" />
 ```
-此外，还可以通过java代码手动调用setShowText方法，则会重新计算高度并刷新整个view，触发新一轮的动画。<br>
-需要注意的是：
-AnimTextView请尽量给一个paddingTop和paddingBottom，因为这个View高度的计算不是特别精确，怪就怪在canvas.drawText的的起始坐标无法让人理解。在onMeasure测量高度的时候，使用android:layout_height="wrap_content"，可能会有稍微的一丢丢的偏差(很小).<br>
+此外，还可以通过java代码手动调用setShowText方法，则会重新计算高度并刷新整个view，触发新一轮的动画。<br><br>
+需要注意的是：<br>
+AnimTextView请尽量给一个paddingTop和paddingBottom，因为这个View高度的计算不是特别精确，怪就怪在canvas.drawText的的起始坐标无法让人理解。在onMeasure测量高度的时候，使用android:layout_height="wrap_content"在计算高度时，可能会有稍微的一丢丢的偏差(很小).<br>
 此外，andorid:layout_with属性可以直接设置一个宽度，或者设置成fill_parent。<br>
 
 如果还有其它问题，请联系邮箱: 120809170@qq.com
